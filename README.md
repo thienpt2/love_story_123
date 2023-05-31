@@ -1,1 +1,0 @@
-thay ảnh và sử dụng
