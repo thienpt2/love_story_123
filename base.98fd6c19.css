@@ -433,6 +433,18 @@ canvas {
 	left: 0%;
 	height: 429px;
 }
+@media only screen and (max-width: 500px) {
+	.title{
+		margin-top: 150px;
+	}
+	#img_mobile{
+		width: 375px;
+	}
+	#pinkboard{
+		top: -17px;
+	}
+}
+
 
 .STARDUST1 {
 	position: relative !important;
@@ -442,11 +454,20 @@ canvas {
 .STARDUST2 {
 	position: relative !important;
 	top: -40px;
+	animation: myanimation 5s infinite;
 }
 
 .STARDUST3 {
 	position: relative !important;
 	top: -20px;
+}
+@keyframes myanimation {
+	0% {color: red;}
+	20%{color: #fffb00;}
+	40%{color: #0bd8f5;}
+	60%{color: #38ea09;}
+	80% {color: #fcfcfc;}
+	100% {color: #ff0000;}
 }
 #universe {
 	width: 100%;
