@@ -21,18 +21,18 @@
     supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 </head>
 <body class="demo-1 loading">
-<div id="mobile_interface" hidden>
+<div id="mobile_interface" style="" hidden>
     <div class="container2">
         <div class="content">
             <canvas id="universe"></canvas>
         </div>
     </div>
     <div class="title">
-
-        <h3 class="STARDUST1">2022</h3>
+        <h3 class="STARDUST1" style="font-size: 30px">05/06/2003</h3><br>
+        <h3 class="STARDUST1" style="font-size: 30px" id="date"></h3>
         <h1 class="STARDUST2">TH &amp; TT</h1>
-        <h3 class="STARDUST3">L O V E <strong>❤</strong> Y O U</h3>
-        <img class="img" src="img/thien-huyen.jpg" alt="JUNO_OKYO"/>
+        <h3 class="STARDUST3">L O V E <strong style="color: red">❤</strong> Y O U</h3>
+        <img id="img_mobile" class="img" src="img/thien-huyen.jpg" alt="JUNO_OKYO"/>
         <canvas id="pinkboard"></canvas>
     </div>
 </div>
@@ -86,7 +86,19 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script>const isMobile = {
+<script>
+    window.onload = setInterval(clock,1000);
+    function clock()
+    {
+        var d = new Date();
+        var date = d.getDate();
+        var year = d.getFullYear();
+        var month = d.getMonth();
+        var monthArr = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
+        month = monthArr[month];
+        document.getElementById("date").innerHTML=d.toLocaleString('en-GB',{hour12: false});
+    }
+    const isMobile = {
     Android: function () {
         return navigator.userAgent.match(/Android/i);
     },
