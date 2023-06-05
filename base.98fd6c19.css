@@ -427,6 +427,12 @@ canvas {
 	left: 0%;
 	height: 429px;
 }
+#pinkboard_mobile {
+	position: relative;
+	top: 0%;
+	left: 0%;
+	height: 429px;
+}
 
 .STARDUST1 {
 	position: relative !important;
