@@ -57,8 +57,8 @@
                 <div class="grid__item-img" style="background-image:url(huyen-3.jpg);"></div>
             </div>
         </div>
-        <h3 class="STARDUST3">TH &amp; TT <br>   L O V E <strong>❤</strong> Y O U</h3>
-        <img class="img" src="img/thien-huyen.jpg"/>
+        <h3 class="STARDUST3">TH &amp; TT <br> L O V E <strong>❤</strong> Y O U</h3>
+        <img id="img_love_center" class="img" src="img/thien-huyen.jpg"/>
         <canvas id="pinkboard"></canvas>
 
     </div>
@@ -78,5 +78,29 @@
 <script src="js/particle.js"></script>
 <script src="js/universe.js"></script>
 <script src="demo1.151408fb.js"></script>
+<script>const isMobile = {
+    Android: function () {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function () {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+if (isMobile.any()) {
+    $('#img_love_center').attr('hidden', true);
+}
+</script>
 </body>
 </html>
