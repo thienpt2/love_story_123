@@ -21,7 +21,22 @@
     supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 </head>
 <body class="demo-1 loading">
-<main>
+<div id="mobile_interface" hidden>
+    <div class="container2">
+        <div class="content">
+            <canvas id="universe"></canvas>
+        </div>
+    </div>
+    <div class="title">
+
+        <h3 class="STARDUST1">2022</h3>
+        <h1 class="STARDUST2">TH &amp; TT</h1>
+        <h3 class="STARDUST3">L O V E <strong>❤</strong> Y O U</h3>
+        <img class="img" src="img/thien-huyen.jpg" alt="JUNO_OKYO"/>
+        <canvas id="pinkboard"></canvas>
+    </div>
+</div>
+<main id="pc_interface">
     <div class="frame">
     </div>
     <div class="content">
@@ -58,26 +73,19 @@
             </div>
         </div>
         <h3 class="STARDUST3">TH &amp; TT <br> L O V E <strong>❤</strong> Y O U</h3>
-        <img id="img_love_center" class="img" src="img/thien-huyen.jpg"/>
-        <canvas id="pinkboard"></canvas>
+        <img id="img_love_center" class="img img_love_center" src="img/thien-huyen.jpg"/>
+                <canvas id="pinkboard_mobile"></canvas>
 
     </div>
 </main>
+
 <svg class="cursor" width="80" height="80" viewBox="0 0 80 80">
     <circle class="cursor__inner" cx="40" cy="40" r="20"></circle>
 </svg>
-<div class="container2">
-    <div class="content">
-        <canvas id="universe"></canvas>
-    </div>
-</div>
+</body>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/particle.js"></script>
-<script src="js/universe.js"></script>
-<script src="demo1.151408fb.js"></script>
 <script>const isMobile = {
     Android: function () {
         return navigator.userAgent.match(/Android/i);
@@ -99,8 +107,16 @@
     }
 };
 if (isMobile.any()) {
-    $('#img_love_center').attr('hidden', true);
+    $('#mobile_interface').attr('hidden', false);
+    $('#pc_interface').attr('hidden', true);
+} else {
+    $('#mobile_interface').attr('hidden', true);
+    $('#pc_interface').attr('hidden', false);
 }
 </script>
+<script src="js/main.js"></script>
+<script src="js/particle.js"></script>
+<script src="js/universe.js"></script>
+<script src="demo1.151408fb.js"></script>
 </body>
 </html>
